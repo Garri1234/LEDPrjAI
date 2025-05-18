@@ -181,4 +181,45 @@ style.textContent = `
     }
 `;
 
-document.head.appendChild(style); 
+document.head.appendChild(style);
+
+let currentLang = localStorage.getItem('language') || 'en';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('language', lang);
+    updateContent();
+}
+
+function updateContent() {
+    // Обновление навигации
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = translations[currentLang];
+        keys.forEach(k => {
+            value = value[k];
+        });
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = value;
+        } else {
+            element.textContent = value;
+        }
+    });
+
+    // Обновление атрибута lang у html
+    document.documentElement.lang = currentLang;
+}
+
+// Инициализация переключателя языков
+document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = document.createElement('div');
+    languageSelector.className = 'language-selector';
+    languageSelector.innerHTML = `
+        <button onclick="setLanguage('en')" class="lang-btn ${currentLang === 'en' ? 'active' : ''}">EN</button>
+        <button onclick="setLanguage('de')" class="lang-btn ${currentLang === 'de' ? 'active' : ''}">DE</button>
+    `;
+    document.querySelector('.navbar').appendChild(languageSelector);
+    
+    updateContent();
+}); 
