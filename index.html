@@ -10,7 +10,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">LED<span>Panels</span></div>
+        <div class="logo">
+            <img src="images/logo.png" alt="LED Films Logo" class="logo-image">
+            <div class="logo-text">LED<span>Films</span></div>
+        </div>
         <ul class="nav-links">
             <li><a href="#home" data-i18n="nav.home">Home</a></li>
             <li><a href="#features" data-i18n="nav.features">Features</a></li>
@@ -34,14 +37,14 @@
             <div class="video-overlay"></div>
         </div>
         <div class="hero-content">
-            <h1 data-i18n="hero.title">Next Generation LED Display Solutions</h1>
-            <p data-i18n="hero.subtitle">Transform your space with cutting-edge LED technology</p>
+            <h1 data-i18n="hero.title"></h1>
+            <p data-i18n="hero.subtitle">Verwandeln Sie Glas in eine Leinwand</p>
             <a href="#contact" class="cta-button" data-i18n="hero.cta">Get Started</a>
         </div>
     </section>
 
     <section id="features" class="features">
-        <h2 data-i18n="features.title">Why Choose Our LED Panels?</h2>
+        <h2 data-i18n="features.title">Why Choose Our LED Films?</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <i class="fas fa-tv"></i>
@@ -67,25 +70,37 @@
     </section>
 
     <section id="gallery" class="gallery">
-        <h2 data-i18n="gallery.title">Gallery</h2>
+        <h2 data-i18n="gallery.title">Video Galerie</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="images/panel1.jpg" alt="LED Panel in Shopping Center">
+                <video controls>
+                    <source src="videos/gallery1.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
             <div class="gallery-item">
-                <img src="images/panel2.jpg" alt="LED Panel in Exhibition">
+                <video controls>
+                    <source src="videos/gallery2.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
             <div class="gallery-item">
-                <img src="images/panel3.jpg" alt="LED Panel Close-up">
+                <video controls aria-label="LED film in Airport">
+                    <source src="videos/gallery3.mp4" type="video/mp4" title="LED film in Airport">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
             <div class="gallery-item">
-                <img src="images/panel4.jpg" alt="LED Panel Installation">
+                <video controls aria-label="LED Film in Railway">
+                    <source src="videos/gallery4.mp4" type="video/mp4" title="LED Film in Railway">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
             </div>
         </div>
     </section>
 
     <section id="video" class="video-showcase">
-        <h2 data-i18n="video.title">See Our Panels in Action</h2>
+        <h2 data-i18n="video.title">See Our Films in Action</h2>
         <div class="video-container">
             <video controls poster="images/video-poster.jpg">
                 <source src="videos/led-demo.mp4" type="video/mp4">
@@ -116,7 +131,7 @@
                 </div> 
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
-                    <p>info@ledpanels.com</p>
+                    <p>info@ledfilms.com</p>
                 </div>
             </div>
         </div>
@@ -125,7 +140,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>LED Panels</h3>
+                <h3>LED Films</h3>
                 <p data-i18n="footer.description">Transforming spaces with innovative display technology</p>
             </div>
             <div class="footer-section">
@@ -148,7 +163,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p data-i18n="footer.rights">&copy; 2024 LED Panels. All rights reserved.</p>
+            <p data-i18n="footer.rights">&copy; 2024 LED Films. All rights reserved.</p>
         </div>
     </footer>
 
